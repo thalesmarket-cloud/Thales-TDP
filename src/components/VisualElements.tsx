@@ -73,7 +73,7 @@ export const AnimatedBadge = () => (
     className="inline-flex items-center space-x-2 bg-blue-50 border border-blue-100 px-3 py-1 rounded-full mb-6"
   >
     <CheckCircle2 size={14} className="text-corporate-accent" />
-    <span className="text-[10px] uppercase tracking-widest font-semibold text-corporate-blue">Conformité DGI Maroc & Réglementation 2024</span>
+    <span className="text-[10px] uppercase tracking-widest font-semibold text-corporate-blue">Conformité DGI Maroc & Réglementation 2026</span>
   </motion.div>
 );
 
