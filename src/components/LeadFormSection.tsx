@@ -37,7 +37,7 @@ export const LeadFormSection = () => {
     setIsSubmitting(true);
     
     // --- COLLEZ VOTRE LIEN /EXEC CI-DESSOUS ---
-    const scriptUrl = "https://script.google.com/macros/s/AKfycbw4pXFEuKO1zDb9pacIwNxiteDVBReaZU6SFwcfBFPZ1lpBoskP6G4vEyQF7vqEm3I/exec";
+    const scriptUrl = "https://script.google.com/macros/s/AKfycbz7ljooB_3aKSnTc9cHs2F0WIrZijZUrKuvUruSiiAWqNEozUgPUUwd9eR2BlhH07aoTQ/exec";
     // ------------------------------------------
     
     try {
