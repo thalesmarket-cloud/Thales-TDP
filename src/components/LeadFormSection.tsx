@@ -41,7 +41,7 @@ export const LeadFormSection = () => {
     // ------------------------------------------
     
     try {
-      if (scriptUrl && scriptUrl !== 'MY_APPS_SCRIPT_URL') {
+      if (scriptUrl && !scriptUrl.includes('VOTRE_LIEN')) {
         // We use fetch with mode no-cors for simple Google App Script submissions if needed, 
         // but standard POST with JSON is preferred if script is configured for it.
         const response = await fetch(scriptUrl, {
@@ -108,6 +108,12 @@ export const LeadFormSection = () => {
           transition={{ duration: 0.8 }}
           className="z-10"
         >
+          <img 
+            src="https://res.cloudinary.com/dmutnjgp8/image/upload/v1772030743/logo_thal%C3%A8s_1_tkhzkc.png" 
+            alt="Thalès Informatique" 
+            className="h-16 w-auto mb-8 object-contain mx-auto md:mx-0"
+            referrerPolicy="no-referrer"
+          />
           <AnimatedBadge />
           <h1 className="text-4xl md:text-6xl font-bold text-corporate-dark leading-[1.1] mb-6">
             Télédéclaration simplifée & conformité
