@@ -17,8 +17,7 @@ import { SecureShield, AnimatedBadge } from './VisualElements.tsx';
 type ServiceOption = 
   | 'Demander un devis'
   | 'Prendre un rendez-vous'
-  | 'Audit gratuit de conformité'
-  | 'Démonstration de solution ERP';
+  | 'Demander une démonstration';
 
 export const LeadFormSection = () => {
   const [formData, setFormData] = useState({
@@ -202,8 +201,7 @@ export const LeadFormSection = () => {
                       <option value="" disabled>Sélectionnez une option</option>
                       <option value="Demander un devis">Demander un devis</option>
                       <option value="Prendre un rendez-vous">Prendre un rendez-vous</option>
-                      <option value="Audit gratuit de conformité">Audit gratuit de conformité</option>
-                      <option value="Démonstration de solution ERP">Démonstration de solution ERP</option>
+                      <option value="Demander une démonstration">Demander une démonstration</option>
                     </select>
                     <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none" size={18} />
                   </div>
