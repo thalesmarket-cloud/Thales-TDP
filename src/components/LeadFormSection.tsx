@@ -35,10 +35,36 @@ export const LeadFormSection = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1500));
-    setIsSubmitting(false);
-    setSuccess(true);
+    
+    const scriptUrl = import.meta.env.VITE_GOOGLE_SHEETS_URL;
+    
+    try {
+      if (scriptUrl && scriptUrl !== 'MY_APPS_SCRIPT_URL') {
+        // We use fetch with mode no-cors for simple Google App Script submissions if needed, 
+        // but standard POST with JSON is preferred if script is configured for it.
+        const response = await fetch(scriptUrl, {
+          method: 'POST',
+          mode: 'no-cors', // Common for Apps Script to avoid CORS preflight issues in simple setups
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(formData),
+        });
+        
+        // Note: with no-cors, we can't read the response, so we assume success if no error thrown
+      } else {
+        // Fallback or demo mode
+        await new Promise(resolve => setTimeout(resolve, 1500));
+        console.log("Données du formulaire (Mode Démo) :", formData);
+      }
+      
+      setSuccess(true);
+    } catch (error) {
+      console.error("Erreur d'envoi :", error);
+      alert("Une erreur est survenue lors de l'envoi. Veuillez réessayer.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const inputClasses = "w-full bg-slate-50 border border-slate-200 rounded-lg px-4 py-3 text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-corporate-blue focus:border-transparent transition-all duration-200";
