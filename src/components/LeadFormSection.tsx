@@ -36,7 +36,9 @@ export const LeadFormSection = () => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    const scriptUrl = import.meta.env.VITE_GOOGLE_SHEETS_URL;
+    // --- COLLEZ VOTRE LIEN /EXEC CI-DESSOUS ---
+    const scriptUrl = "https://script.google.com/macros/s/AKfycbw4pXFEuKO1zDb9pacIwNxiteDVBReaZU6SFwcfBFPZ1lpBoskP6G4vEyQF7vqEm3I/exec";
+    // ------------------------------------------
     
     try {
       if (scriptUrl && scriptUrl !== 'MY_APPS_SCRIPT_URL') {
