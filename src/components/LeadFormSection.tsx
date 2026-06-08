@@ -119,7 +119,7 @@ export const LeadFormSection = () => {
             Télédéclaration simplifée & conformité
           </h1>
           <p className="text-lg text-slate-600 mb-8 leading-relaxed max-w-lg">
-            Déclarez vos délais de paiement en toute simplicité et restez 100% conforme avec IntuiEDI
+            Déclarez vos délais de paiement en toute simplicité et restez 100% conforme & 100% digital.
           </p>
 
           <div className="mt-12 flex items-center space-x-8 opacity-70 grayscale transition-all hover:grayscale-0">
