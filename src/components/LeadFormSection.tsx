@@ -10,7 +10,7 @@ import {
   AlertCircle,
   ArrowRight,
   ShieldCheck,
-  MapPin
+  Briefcase
 } from 'lucide-react';
 import { SecureShield, AnimatedBadge } from './VisualElements.tsx';
 
@@ -25,7 +25,7 @@ export const LeadFormSection = () => {
     email: '',
     phone: '',
     company: '',
-    city: '',
+    fonction: '',
     service: '' as ServiceOption | ''
   });
 
@@ -208,17 +208,17 @@ export const LeadFormSection = () => {
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                 <div>
-                  <label htmlFor="city" className={labelClasses}>Ville</label>
+                  <label htmlFor="fonction" className={labelClasses}>Fonction</label>
                   <div className="relative">
-                    <MapPin className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400" size={18} />
+                    <Briefcase className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400" size={18} />
                     <input 
                       required
                       type="text" 
-                      id="city"
-                      placeholder="Casablanca, Rabat, Tanger..."
+                      id="fonction"
+                      placeholder="Ex: Directeur Financier, Comptable..."
                       className={`${inputClasses} pl-12`}
-                      value={formData.city}
-                      onChange={(e) => setFormData({...formData, city: e.target.value})}
+                      value={formData.fonction}
+                      onChange={(e) => setFormData({...formData, fonction: e.target.value})}
                     />
                   </div>
                 </div>
